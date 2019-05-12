@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="module" src="index.js"></script>
+    <script>const reset = () => {
+      const req = new XMLHttpRequest();
+      req.open('GET', 'http://localhost:3000/reset?secret=THISISNOTREALLYASECRET', false);
+      req.send(null);
+    }</script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div id="gitgraph" style="{opacity: 1}"></div>
+     <div id="gitgraph2" style="{opacity: 0}"></div>
+</div>
+     <button style="position: fixed; bottom: 20px; left: 20px; z-index: 999;" onclick="reset()">RESET ALL</button>
+</body>
+</html>
